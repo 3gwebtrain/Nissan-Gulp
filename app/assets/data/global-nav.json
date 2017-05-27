@@ -1,0 +1,10 @@
+[[{"name":"Search","status":true,"evnt":"search"},
+{"name":"Modify","status":true,"evnt":"modify"},
+{"name":"Cancel","status":true,"evnt":"cancel"}],
+[{"name":"Confirm","status":true,"evnt":"confirm"},
+{"name":"I\/Line","status":true,"evnt":"copy"},
+{"name":"Aline","status":true,"evnt":"add"}],
+[{"name":"LST DL","status":true,"evnt":"deleteRow"},
+{"name":"CSV DL","status":true,"evnt":"commit"},
+{"name":"Delete","status":true,"evnt":"deleteRow"},
+{"name":"Up\/Ref","status":true,"evnt":"commit"}]]

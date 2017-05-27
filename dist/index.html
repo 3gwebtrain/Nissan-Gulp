@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+	<!-- don't remove -->
+	<base href="/">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+<body ng-app="blog">
+	<div class="container-fluid">
+	<div class="row">
+	<aside class="col-sm-3">
+	<a ng-href="/new">Write Post</a>
+			</aside>
+			<section class="col-sm-9" ng-view></section>
+		</div>
+	</div>
+	<script src="js/vendor.min.js"></script>
+	<script src="js/app.min.js"></script>
+</body>
+</html>

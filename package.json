@@ -1,0 +1,26 @@
+{
+  "name": "nissan-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohamed Arif B",
+  "license": "ISC",
+  "devDependencies": {
+    "connect-history-api-fallback": "^1.3.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-useref": "^3.1.2",
+    "main-bower-files": "^2.13.1"
+  }
+}

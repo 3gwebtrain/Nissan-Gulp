@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+	<!-- don't remove -->
+	<base href="/">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--build:css css/style.min.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="lib/angular-ui-grid/ui-grid.css">
+	<link rel="stylesheet" href="lib/angular-block-ui/dist/angular-block-ui.css">
+	<link rel="stylesheet" href="lib/pqGrid/pqgrid.dev.css">
+	<!-- endinject -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="stylesheets/main.css">
+	<link rel="stylesheet" href="stylesheets/angular-block-ui/angular-block-ui.css">
+	<link rel="stylesheet" href="stylesheets/angular-ui-grid/ui-grid.min.css">
+	<link rel="stylesheet" href="stylesheets/handson/handsontable.full.min.css">
+	<link rel="stylesheet" href="stylesheets/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqgrid.bootstrap.min.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqgrid.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqselect.dev.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqselect.min.css">
+	<link rel="stylesheet" href="stylesheets/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="stylesheets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheets/foundation/css/foundation-datepicker.min.css">
+	<link rel="stylesheet" href="stylesheets/foundation/css/foundation.css">
+	<link rel="stylesheet" href="stylesheets/foundation/css/normalize.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.bootstrap.dev.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.bootstrap.min.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.dev.css">
+	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.min.css">
+	<!-- endinject -->
+	<!-- endbuild -->
+</head>
+<body ng-app="blog">
+	<div class="container-fluid">
+	<div class="row">
+	<aside class="col-sm-3">
+	<a ng-href="/new">Write Post</a>
+			</aside>
+			<section class="col-sm-9" ng-view></section>
+		</div>
+	</div>
+	<!-- build:js js/vendor.min.js -->
+	<!-- bower:js -->
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/jquery/dist/jquery.js"></script>
+	<script src="lib/angular-route/angular-route.js"></script>
+	<script src="lib/angular-foundation/mm-foundation-tpls.js"></script>
+	<script src="lib/jquery-ui/jquery-ui.js"></script>
+	<script src="lib/fastclick/lib/fastclick.js"></script>
+	<script src="lib/angular-ui-grid/ui-grid.js"></script>
+	<script src="lib/jquery.cookie/jquery.cookie.js"></script>
+	<script src="lib/jquery-placeholder/jquery.placeholder.js"></script>
+	<script src="lib/what-input/dist/what-input.js"></script>
+	<script src="lib/angular-block-ui/dist/angular-block-ui.js"></script>
+	<script src="lib/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+	<script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+	<script src="lib/angular-translate-loader-url/angular-translate-loader-url.js"></script>
+	<script src="lib/file-saver/FileSaver.js"></script>
+	<script src="lib/angular-ui-sortable/sortable.js"></script>
+	<script src="lib/foundation/js/foundation.js"></script>
+	<script src="lib/angular-ui-chart/src/chart.js"></script>
+	<script src="lib/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+	<script src="lib/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+	<script src="lib/pqGrid/pqgrid.dev.js"></script>
+	<script src="lib/ng-handsontable/dist/ngHandsontable.js"></script>
+	<!-- endinject -->
+	<!-- endbuild -->
+	<!-- build:js js/app.min.js -->
+	<!-- inject:js -->
+	<script src="modules/app.js"></script>
+	<script src="modules/blog.services.js"></script>
+	<script src="modules/templates.js"></script>
+	<script src="modules/users/users.controller.js"></script>
+	<!-- endinject -->
+	<!-- endbuild -->
+</body>
+</html>
