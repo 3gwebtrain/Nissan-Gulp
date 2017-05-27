@@ -24,13 +24,18 @@ gulp.task('server-dist', function() {
 	});
 });
 
+gulp.task('html', function() {
+  gulp.src('./app/**/*.html')
+    .pipe(connect.reload());
+});
+
 /*inejction process*/
 
 gulp.task( "inject", function( ) {
 	return gulp.src('./app/index.html')
 	.pipe(inject(gulp.src(bowerFiles(), {read: false}), {name: 'bower', relative: true }))
   	.pipe(inject(
-  		gulp.src(['./app/modules/**/*.js'],{read: false}), {relative:true})
+  		gulp.src(['./app/modules/**/*.js']).pipe(angularFilesort(),{read: false}), {relative:true})
   	)
   	.pipe(inject(
   		gulp.src(['./app/stylesheets/**/*.css' ], {read: false}), {relative: true})
@@ -45,10 +50,12 @@ gulp.task('copy', require('./gulp/build/copy')(gulp, plugins));
 gulp.task('uncss', require('./gulp/build/uncss')(gulp, plugins));
 
 gulp.task('watch', function( ) {
+	gulp.watch(['./app/**/*.html'], ['html', 'templates']);
 	gulp.watch(['./app/stylesheets/**/*.css' ], ["inject"]);
 	gulp.watch(['./app/modules/**/*.js', './Gulpfile.js'], ['inject']);
+	gulp.watch(['./bower.json'], ['inject']);
 });
 
-gulp.task('default', ['server', 'inject', 'watch' ]);
+gulp.task('default', ['server', 'templates', 'inject', 'watch' ]);
 
 gulp.task('build', ['templates', 'compress', 'copy','uncss']);
