@@ -1,7 +1,7 @@
 (function( ){
 
 	"use strict";
-	angular.module("blog.services", ["ngResource"])
+	angular.module("blog.services", [])
 	.service("userService", function( ) {
 
 		console.log("service called");
