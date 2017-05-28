@@ -1,0 +1,4 @@
+<select ng-model="plant.plantCd" class="dropdown-select searchText" id="plantCodeId"
+        ng-change="plant.selectPlantCd(plant.plantCd)"
+        ng-options="plantCd.value for plantCd in plant.plantCodes track by plantCd.value" >
+</select>   

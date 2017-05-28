@@ -1,0 +1,7 @@
+<div>
+    <button type="button" id="searchBtn" class="button tiny" ng-click="vm.butnGrp()" style="height: 32px;width:10px;background: green; top:3px;">{{vm.buttName}}</button>
+    <span ng-repeat="menuSet in vm.menu"  ng-show="vm.showButn{{$index+1}}" >
+        <button  ng-repeat="(key,value) in menuSet" type="button" id="{{value.name}}Btn" style="margin-left:3px;" 
+            ng-click="n2de1.search(value.evnt)"  class="button tiny" ng-disabled="!value.status" translate>{{value.name | translate}}</button>
+    </span>
+</div>

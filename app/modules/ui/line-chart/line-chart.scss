@@ -1,0 +1,18 @@
+.ns-line-chart {
+
+  .jqplot-yaxis {
+    width: rem-calc(60) !important;
+    text-align: right;
+  }
+
+  .jqplot-yaxis-tick,
+  .jqplot-xaxis-tick {
+    color: #222222;
+    font-size: rem-calc(12);
+  }
+
+  .jqplot-yaxis-tick {
+    width: 100% !important;
+    padding-right: rem-calc(10);
+  }
+}

@@ -1,0 +1,92 @@
+<div id="idConfigureSearchCriteria" class="config-detail" ng-class="{active: vm.saveCriteriaEnabled}">
+   
+	<div class="config-detail-header clearfix">
+	 	<button class="button control tiny radius right" ng-click="vm.hideDetail()">
+	        <span class="fa fa-times"></span>
+	    </button>
+	   
+        
+    </div>
+    <div class="config-detail-body">
+				<div class="panel customPanel" >
+					<div class="panelRow">
+			    		<div class="column small-6">
+							<span >
+								Configured Items -Search Criteria
+							</span>
+						</div>
+						<div class="column small-6 text-right">
+			        		<a ><label style="color:white"><span  dropdown-toggle="#dropdown-configureSearch"><i class="fa fa-cog" aria-hidden="true"></i></span></label> </a>
+			     		</div>
+			     		<ul id="dropdown-configureSearch" class="f-dropdown">
+		    				<li>
+		      					<a ng-click="vm.updateSrchCriteria()">Save</a>
+		    				</li>
+		    				<li>
+	      						<a ng-click="vm.backToHome()">Home</a>
+	    					</li>
+		  				</ul>
+	     			</div>		 
+				</div>
+				<div class="panel saveCritPanel" style="background: #ffffff;" >
+					<div  >
+						<table class="config-table">
+							<thead ns-affix affix-top="100">
+		        				<tr>
+		        					<th style="text-align:center">Name</th>
+		              				<th style="text-align:center">Value</th>
+		              				<th style="text-align:center">Active</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="field in vm.listVal track by $index" >
+									<td style="text-align: center;">
+										{{field.name}}
+									</td>
+									<td style="text-align: center;">
+										{{field.value}}
+									</td>
+									<td style="text-align: center;">
+										<input type="radio" name="respone" value="true" ng-checked="field.active" ng-click="vm.setSelection(vm.searchCriteriaVals, field)">
+									</td>
+								</tr>
+							</tbody>	
+						</table>
+					</div>
+				</div>
+				<div id="idAutoSearch">
+						<div class="panel customPanel" >
+							<div class="panelRow">
+					    		<div class="column small-6">
+									<span >
+										Auto Search Settings
+									</span>
+								</div>
+								<div class="column small-6 text-right">
+					        		<a ><label style="color:white"><span  dropdown-toggle="#dropdown-configureSearch1"><i class="fa fa-cog" aria-hidden="true"></i></span></label> </a>
+					     		</div>
+					     		<ul id="dropdown-configureSearch1" class="f-dropdown">
+				    				<li>
+				      					<a ng-click="vm.saveAutoSearch()">Save</a>
+				    				</li>
+				    				<li>
+			      						<a ng-click="vm.backToHome()">Home</a>
+			    					</li>
+				  				</ul>
+			     			</div>		 
+						</div>
+						<div class="panel searchPanel" style="background: #ffffff;">
+							<div class="row">
+			      				<div class="column small-6">
+									Enable Auto Search
+								</div>
+								<div class="column small-6">
+			        				<span><input type="radio" name="aSearch" value="Yes" ng-model="vm.autoSearch" > &nbsp;Yes &nbsp;</span>
+			        				<span><input type="radio" name="aSearch" value="No" ng-model="vm.autoSearch" > &nbsp; No &nbsp;</span>
+			     				</div>
+			     				
+			     			</div>	
+						</div>
+				</div> 
+	</div>
+</div>	 

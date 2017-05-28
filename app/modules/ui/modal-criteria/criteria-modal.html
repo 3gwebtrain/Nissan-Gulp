@@ -1,0 +1,27 @@
+<div>
+	<a class="close" ng-click="critModal.cancel()">
+	  <span class="fa fa-times"></span>
+	</a>
+	<div class="modal-header" style="background-color: #333;">
+	  <h3 class="modal-title" style="color: #f5f5f5;">Settings</h3>
+	</div>
+	<div class="modal-body">
+	  
+	 	<div class="panel" style="margin-left:30px;margin-right:30px;text-align:center;margin-top:20px;margin-bottom:20px;background-color: white !important;">
+	    	<div class="row customLabel">
+		    	<div style="padding: 10px;">
+		    		Please enter name below to save the selected search criteria
+		    	</div>
+		    	<div class="row customLabel" style="text-align: center; padding-left:150px;padding-right:150px;">
+		    		<input type="text"  style="height:30px;" ng-model="critModal.searchCrtName" maxlength="10">
+		    	</div>
+	    	</div>
+		</div>
+		<div class="modal-footer">
+		   <div class="customLabel" style="text-align:right;">
+		   		<input type="button" name="Cancel" value="Cancel" ng-click="critModal.cancel()"/>
+		   		<input type="button"  name="Save" value="Save" ng-click="critModal.save()"/>
+		   </div>
+		</div>
+	</div>
+</div>

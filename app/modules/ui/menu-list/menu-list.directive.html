@@ -1,0 +1,6 @@
+<div>    
+    <span ng-repeat="menuSet in vm.menu"  class="buttonList" >
+        <button  ng-repeat="(key,value) in menuSet" type="button" id="{{value.idAttr}}Btn" style="margin-left:3px;"  class="button tiny" 
+		ng-disabled="!vm.showGrid && !value.status" translate>{{value.name}}</button>
+    </span>
+</div>

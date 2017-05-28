@@ -1,0 +1,354 @@
+<div class="global-nav-overlay" ng-show="vm.toggle" ng-click="vm.off()"></div>
+<div id="globalNav" class="global-nav" ng-class="{on:!vm.toggle}" >
+   <div ng-show="vm.plntCdDsply" style="padding-top:25%;padding-left:10%;padding-right:10%;">
+		<div>Please select Plant Code</div>
+		<div><select class="searchText ng-pristine ng-untouched ng-valid" style="height: 30px; font-size: .65rem;" 
+					ng-options="plantCode.name for plantCode in vm.plantCodes" 
+					ng-init = "vm.plantCode = vm.plantCodes[0]" 
+					ng-model="vm.plantCode" id="plantCodeGlobalDDId">
+			</select>
+		</div>
+		<div><button  name="Save" ng-click="vm.savePlantCode()" class="button tiny">Save</button></div>
+	</div>	
+
+  <ul class="side-navg" style="padding-left: .01rem;margin-top: 0rem;margin-left: 0rem;" ng-show="vm.menuDsply">
+
+	<li><a ng-click="vm.plantSelection()"><i class="fa fa-caret-square-o-left" aria-hidden="true"></i>&nbsp;&nbsp;
+  Plant Selection</a></li>
+    <!-- <li><a href="#/" class="ns-collapse-trigger cls-menu-height">NMT (PV) iNIMS-PCS 2</a></li> -->
+    <li><a class="ns-collapse-trigger" ns-collapse="#collapse-1" ng-click="vm.changeMenuUpDwnIcon(1)">
+      <span id="menu-up-dwn-icon1">&#9660;</span>
+      1. Parts Specification Control
+    </a>
+      <ul id="collapse-1" class="side-navg ns-collapse" >
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-1-1" ng-click="vm.changeMenuUpDwnIcon(2)">
+           <span   id="menu-up-dwn-icon2">&#9660;</span>
+            1. Parts File Maintenance
+
+          </a>
+          <ul id="collapse-1-1" class="side-navg ns-collapse cls-end-menu">
+            <li><a href="#/n2dnb_pfmaster" title="N2DND">1. P/F MASTER Maintenance</a></li>
+            <li><a href="#/n2dna_scrn" title="N2DNA">2. Delivery Time Table</a></li>
+            <li><a href="">3. P/F Elimination Cancel</a></li>
+            <li><a href="">4. Packing Specification Macro Maintenance</a></li>
+            <li><a href="">5. Lead Time Macro Maintenance</a></li>
+            <li><a href="#/n2dnd_scrn" title="N2DND">6. Supply SPEC Search &amp; Maintenance</a></li>
+            <li><a href="">7. MH Specification</a></li>
+            <li><a href="#/n2dne_scrn" title="N2DNE">8. Parts Arrangement SPEC Maintenance</a></li>
+            <li><a href="">9. Weekly Order Frequency Prarameter</a></li>
+            <li><a href="#/n2dnj_scrn">B. PF Manual Update Log</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-1-2" ng-click="vm.changeMenuUpDwnIcon(3)">
+            <span  id="menu-up-dwn-icon3">&#9660;</span>
+            2. P/F Search Only
+
+          </a>
+          <ul id="collapse-1-2" class="side-navg ns-collapse">
+            <li><a href="#/n2de1_scrn" title="N2DE1">1. Similar Parts Search</a></li>
+            <li><a href="#/n2de2_scrn"  title="N2DE2">2. Parts Index Search</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-1-3" ng-click="vm.changeMenuUpDwnIcon(4)">
+            <span id="menu-up-dwn-icon4">&#9660;</span>
+            3. In-House Parts SPEC Maintennance
+          </a>
+          <ul id="collapse-1-3" class="side-navg ns-collapse">
+            <li><a href="">1. MACH SPEC Maintenance</a></li>
+            <li><a href="">2. SIMPLE SPEC</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-1-4" ng-click="vm.changeMenuUpDwnIcon(5)">
+          <span id="menu-up-dwn-icon5">&#9660;</span>
+            4. In-House Parts SPEC Search
+          </a>
+          <ul id="collapse-1-4" class="side-navg ns-collapse">
+            <li><a href="" >1. Similar Parts Search</a></li>
+            <li><a href="#/n2dc1_scrn"  title="N2DC1">2. (In-House) Parts Index Search</a></li>
+            <li><a href="">3. In-House Parts SPEC Search</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-1-5" ng-click="vm.changeMenuUpDwnIcon(6)">
+          <span id="menu-up-dwn-icon6">&#9660;</span>
+            5. P/S Maintenance
+          </a>
+          <ul id="collapse-1-5" class="side-navg ns-collapse">
+            <li><a href="">1. P/S Search &amp; Maintenance</a></li>
+            <li><a href="">2. P/S Tree Search</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-1-6" ng-click="vm.changeMenuUpDwnIcon(7)">
+           <span id="menu-up-dwn-icon7">&#9660;</span>
+            6. P/F Related Parameter
+          </a>
+          <ul id="collapse-1-6" class="side-navg ns-collapse">
+            <li><a href="">1. No Packing Application Form Setting</a></li>
+            <li><a href="">2. Packing Size Parameter</a></li>
+            <li><a href="">3. Packing SPEC Table</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-1-7" ng-click="vm.changeMenuUpDwnIcon(8)">
+          <span id="menu-up-dwn-icon8">&#9660;</span>
+            7. Logistics Parameter
+          </a>
+          <ul id="collapse-1-7" class="side-navg ns-collapse">
+            <li><a href="">1. (Ex-Work) Invoice Due Date Parameter</a></li>
+            <li><a href="">2. (Ex-Work) Not Required Payment Prmtr</a></li>
+            <li><a href="">3. (per Car) Vehicle Mdl Filtering Prmtr</a></li>
+            <li><a href="">4. (per C/V) Vehicle Model Setting Prmtr</a></li>
+            <li><a href="">5. (per C/V) Unit Model Filtering Prmtr</a></li>
+            <li><a href="">6. (per C/V) Unit Model Setting Prmtr</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+    <li>
+      <a class="ns-collapse-trigger" ns-collapse="#collapse-2" ng-click="vm.changeMenuUpDwnIcon(9)">
+        <span id="menu-up-dwn-icon9">&#9660;</span>
+        2. Work Instruction
+      </a>
+      <ul id="collapse-2" class="side-navg ns-collapse">
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-2-1">
+            1. Work Instruction(Vehicle)
+          </a>
+          <ul id="collapse-2-1" class="side-navg ns-collapse">
+            <li><a href="">1. W/I Cd Macro-Mntnnc (Prefix/Surfix)</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-2-2">
+            2. Work Instruction Code Prameter
+          </a>
+          <ul id="collapse-2-2" class="side-navg ns-collapse">
+            <li><a href="">1. Applied Model Setting</a></li>
+            <li><a href="">2. Summary Group Setting</a></li>
+            <li><a href="">3. Work Instruction Code Setting</a></li>
+            <li><a href="">4. HIDIC Column Conversion</a></li>
+            <li><a href="">6. Work Instruction Master (New/Abolish)</a></li>
+            <li><a href="">7. Work Instruction Cd Mntnnc Booking</a></li>
+            <li><a href="">8. W/I Cd Local Colm Mntnnc(Pre&amp;Suf)</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+    <li>
+      <a class="ns-collapse-trigger" ns-collapse="#collapse-3" ng-click="vm.changeMenuUpDwnIcon(10)">
+      <span id="menu-up-dwn-icon10">&#9660;</span>
+        3. Parts Requirement Calculation
+      </a>
+      <ul id="collapse-3"class="side-navg ns-collapse">
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-3-1">
+            1. BM-CONV Parameter
+          </a>
+          <ul id="collapse-3-1" class="side-navg ns-collapse">
+            <li><a href="">1. Division Parameter</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-3-2">
+            2. RQ-SCH Parameter
+          </a>
+          <ul id="collapse-3-2" class="side-navg ns-collapse">
+            <li><a href="#/n41j13_scrn" title="N41J13">1. RQ Cancel (New /Current)</a></li>
+            <li><a href="">2. Line Conversion (Production &amp; Sales)</a></li>
+            <li><a href="#/n41j19_scrn" title="N41J19">3. SPEC Code Link to Sales</a></li>
+            <li><a href="#/n41j18_scrn" title="N41J18">4. E/I Position Deletion</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-3-4">
+            4. Parts Requirement Parameter(Vehicle)
+          </a>
+           <ul id="collapse-3-4" class="side-navg ns-collapse">
+            <li><a href="">1. Working Date Setting</a></li>
+            <li><a href="">2. Production(AL)Line NO. Setting</a></li>
+            <li><a href="">3. Process Cd of Forecast Gross Deletion</a></li>
+            <li><a href="">4. Transaction Week for Delivery Search</a></li>
+            <li><a href="">5. Delivery Gross Adjustment</a></li>
+            <li><a href="#/n4bna_scrn" title="N4BNA">6. Daily Delivery Term Setting</a></li>
+            <li><a href="#/n4bnb_scrn" title="N4BNB">7. Order Term for Specific Supplier</a></li>
+            <li><a href="">8. Order Term check</a></li>
+            <li><a href="">9. Order Modify(Local Parts)</a></li>
+			<li><a href="">A. OCF-applied Parts Parameter Setting</a></li>
+            <li><a href="">B. Import Parts Requirement Parameter</a></li>
+			<li><a href="">C. Parts Requirement SCH Set Prmtr</a></li>
+            <li><a href="">D. Parts Requirement SCH Check</a></li>
+			<li><a href="">F. Synchronizing Parts Forecast</a></li>
+            <li><a href="#/n4bn08_scrn" title="N4BN08">G. Weekly Order Control</a></li>
+			<li><a href="">Z. Thai Local Parameter</a></li>
+
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-3-7">
+            7. FOC Requirement Parameter
+          </a>
+          <ul id="collapse-3-7" class="side-navg ns-collapse">
+            <li><a href="">1. FOC Rqrmnt SCH (Vehicle) Prmtr</a></li>
+            <li><a href="">2. FOC Requirement SCH (Unit) Prmtr</a></li>
+            <li><a href="">3. FOC Requirement Transaction Set Prmtr</a></li>
+            <li><a href="">4. FOC Requirement Pattern Setting Prmtr</a></li>
+            <li><a href="">5. Order Detail Setting Parameter</a></li>
+            <li><a href="">6. Model name Setting Parameter</a></li>
+            <li><a href="">7. Order Detail Change Parameter</a></li>
+            <li><a href="">8. Un-Sendable Supplier Prmtr FOC Rqrmnt</a></li>
+            <li><a href="">9. FOC Requirement DB Mntnnc</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-3-8">
+            8. Automatic L/T Setting Parameter (1)
+          </a>
+          <ul id="collapse-3-8" class="side-navg ns-collapse">
+            <li><a href="">1. L/T Change Date(Daily order) DS</a></li>
+            <li><a href="#/n4bjk1_scrn" title="N4BJK1">2. Lead Time Change Date (ACTUAL order)</a></li>
+            <li><a href="">3. Shift Base Maintenance SB</a></li>
+            <li><a href="">4. Criteria Value Maintenance KI</a></li>
+            <li><a href="">5. [New] Delivery Time Maintenance JI</a></li>
+            <li><a href="#/n4bj46_scrn" title="N4BJ46">6. On Hand Maintenance LA</a></li>
+            <li><a href="">7. Manual Work Maintenance</a></li>
+            <li><a href="">8. Metal Parts Lead Time Setting</a></li>
+            <li><a href="">9. Check Parts &amp; List Output</a></li>
+            <li><a href="">A. Production Fluctuation Maintenance</a></li>
+            <li><a href="">B. Production (AL) Line NO. Setting</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-3-9">
+            9. Automatic L/T Setting Parameter (2)
+          </a>
+          <ul id="collapse-3-9" class="side-navg ns-collapse">
+            <li><a href="">1. Price Maintenance</a></li>
+            <li><a href="">2. Supplier &amp; Depot Maintenance</a></li>
+            <li><a href="">3. Addition Value 1 (Line No) F1</a></li>
+            <li><a href="">4. Addition Value 2(Process Code) F2</a></li>
+            <li><a href="">5. Addition Value 3 (Prd/Ctrl) F3</a></li>
+            <li><a href="">6. Addition Value 4(Supply Place) F4</a></li>
+            <li><a href="">7. Addition Value 5(First 5 Colm) F5</a></li>
+            <li><a href="">8. Addition Value 6(First 12 Colm) F5</a></li>
+            <li><a href="">9. Subtractive value by Parts/#(12 col)</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="ns-collapse-trigger" ns-collapse="#collapse-3-a">
+            A. Import Parts Container Control
+          </a>
+          <ul id="collapse-3-a" class="side-navg ns-collapse">
+            <li><a href="">2. Inbound Container Plan Range Parameters</a></li>
+            <li><a href="">3. Pre-Customs Clearance Container No.</a></li>
+            <li><a href="">4. Container Free time Parameter</a></li>
+            <li><a href="">5. Inbound Container Plan Modification</a></li>
+            <li><a href="">6. Unloading Plan &amp; Results Registration</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+
+    <li>
+	    <a class="ns-collapse-trigger" ns-collapse="#collapse-4" ng-click="vm.changeMenuUpDwnIcon(11)">
+	     <span id="menu-up-dwn-icon11">&#9660;</span>
+	        4. OPICS Parts Control
+	     </a>
+
+     <ul id="collapse-4" class="side-navg ns-collapse">
+            <li><a href="">1. Parts Status</a></li>
+            <li><a href="#/receive_sts_summ?">2. Receiving Status Summary</a></li>
+      </ul>
+    </li>
+
+    <li><a href="" class="ns-collapse-trigger"><span id="menu-up-dwn-icon12">&#9660;</span> 5. Vehicle Production Schedule </a></li>
+
+
+    <li>
+   <!--  <a href="#/e62d4_scrn" class="ns-collapse-trigger"></a> -->
+         <a class="ns-collapse-trigger" ns-collapse="#collapse-6-1" ng-click="vm.changeMenuUpDwnIcon(13)" >
+         	<span id="menu-up-dwn-icon13">&#9660;</span>
+             <span translate>menuid_6</span>
+          </a>
+          <ul id="collapse-6-1" class="side-navg ns-collapse">
+            <li><a class="ns-collapse-trigger" ns-collapse="#collapse-6-1-1" ng-click="vm.changeMenuUpDwnIcon(14)">
+	            <span id="menu-up-dwn-icon14">&#9660;</span>
+	              <span translate>menuid_61</span></a>
+               <ul id="collapse-6-1-1" class="side-navg ns-collapse cls-end-menu">
+            		<li><a  href="#/e62a9_scrn" title="E62A9"><span translate>menuid_611</span></a> </li>
+            		<li><a  href="#/e62nb_scrn" title="E62NB"><span translate>menuid_612</span></a> </li>
+            		<li><a  href="#/e62nd_scrn" title="E62ND"><span translate>menuid_613</span></a> </li>
+          	   </ul>
+            </li>
+            <li><a class="ns-collapse-trigger" ><span id="menu-up-dwn-icon15">&#9660;</span> <span translate>menuid_62</span> </a> </li>
+            <li><a class="ns-collapse-trigger"><span id="menu-up-dwn-icon16">&#9660;</span><span translate>menuid_63</span> </a> </li>
+
+            <li><a class="ns-collapse-trigger" ns-collapse="#collapse-6-1-2" ng-click="vm.changeMenuUpDwnIcon(17)">
+            	<span id="menu-up-dwn-icon17">&#9660;</span><span translate>menuid_64</span> </a>
+               <ul id="collapse-6-1-2" class="side-navg ns-collapse cls-end-menu">
+            		<li><a  href="#/e62d6_scrn" title="E62D6"> <span translate>menuid_641</span> </a> </li>
+            		<li><a  href="#/e62d5_scrn" title="E62D5"> <span translate>menuid_642</span> </a> </li>
+            		<li><a  href="#/e62d4_scrn" title="E62D4"> <span translate>menuid_643</span> </a> </li>
+            		<li><a  href="#/e62na_scrn" title="E62NA"> <span translate>menuid_644</span> </a> </li>
+          	   </ul>
+            </li>
+
+             <li><a class="ns-collapse-trigger" ns-collapse="#collapse-6-1-3" ng-click="vm.changeMenuUpDwnIcon(18)">
+             	<span id="menu-up-dwn-icon18">&#9660;</span> <span translate>menuid_65</span>  </a>
+               <ul id="collapse-6-1-3" class="side-navg ns-collapse cls-end-menu">
+            		<li><a  href="#/e62nc_scrn" title="E62NC"> <span translate>menuid_651</span>   </a> </li>
+            		<li><a  href="#/e62j28_scrn" title="E62J28"> <span translate>menuid_652</span> </a> </li>
+            		<li><a  href="#/e62j30_scrn" title="E62J30"> <span translate>menuid_653</span>  </a> </li>
+            		<li><a  href="#/e62j29_scrn" title="E62J29"> <span translate>menuid_654</span>  </a> </li>
+          	   </ul>
+            </li>
+
+          </ul>
+    </li>
+
+    <li><a href="" class="ns-collapse-trigger">7. SIMPLE Parts Schedule</a></li>
+    <li><a class="ns-collapse-trigger" ns-collapse="#collapse-b" ng-click="vm.changeMenuUpDwnIcon(19)">
+			<span id="menu-up-dwn-icon19">&#9660;</span>
+			B. Shipping Schedule Control
+		</a>
+		  <ul id="collapse-b" class="side-navg ns-collapse" >
+				<li>
+				  <a class="ns-collapse-trigger" ns-collapse="#collapse-b-1" ng-click="vm.changeMenuUpDwnIcon(20)">
+					<span id="menu-up-dwn-icon20">&#9660;</span>
+					1. Shipping Specification
+				  </a>
+				  <ul id="collapse-b-1" class="side-navg ns-collapse cls-end-menu">
+					<li><a href="">1. Shipping Specification Maintenance</a></li>
+					<li><a href="">2. Packing Specification Macro Maintenance</a></li>
+					<li><a href="#/n2dd9_scrn">3. Shipping Lead Time</a></li>
+				  </ul>
+				</li>
+			</ul>
+	</li>
+    <li><a href="" class="ns-collapse-trigger">C. Receiving / Shipping Operation</a></li>
+    <li><a href="" class="ns-collapse-trigger">D. WMS</a></li>
+    <li><a href="" class="ns-collapse-trigger">U. Common System</a></li>
+    <li><a href="" class="ns-collapse-trigger">V. List Management</a></li>
+    <li><a href="" class="ns-collapse-trigger">W. Data Communicator</a></li>
+    <li><a href="" class="ns-collapse-trigger">X. LINK</a></li>
+    <li><a href="#/login" class="ns-collapse-trigger">Logout</a></li>
+  </ul>
+</div>

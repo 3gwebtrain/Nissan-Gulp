@@ -1,0 +1,22 @@
+<!-- <div class="fixed">
+  <div class="top-bar" role="navigation">
+    <button class="top-bar-menu" ng-click="vm.toggleNav()">menu</button>
+    <h2 class="top-bar-title" ng-bind="vm.nav"></h2>
+  </div>
+
+  <ns-global-nav toggle="vm.nav"></ns-global-nav>
+</div> -->
+<div class="cls-topbar-gbl-nav">
+  <h1 class="cls-topbar-title" translate>{{vm.title}}</h1>
+    <div class="cls-topbar" id="idMenuDiv">
+      <button class="cls-menu-tgle-btn" ng-click="vm.toggleNav()">☰</button>
+     <!--  <a href="index.html" class="cls-topbar-back-btn" style="font-weight: bold;font-size:34px;color:#121213;">&#171;</a> -->
+        <div class="small-2 large-2 columns text-right" style="display: inline-block;float: right;margin: 9px;">
+           <ns-lang></ns-lang>
+    </div>
+   
+  <ns-global-nav toggle="vm.nav"></ns-global-nav>
+</div>
+<div ng-click="vm.hideMenu()"></div> 
+
+ 

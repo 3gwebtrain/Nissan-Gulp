@@ -1,0 +1,41 @@
+.ns-collapse,.ns-collapse-trigger{
+	display: none;
+	cursor: pointer;
+	color: #255db2;
+	line-height: inherit;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+.global-nav>.side-navg>li>a {
+    border-bottom: 1px solid #CCC;
+}
+
+
+.side-navg li a:not(.button) {
+    color: #255db2;
+    display: block;
+    margin: 0;
+    /* padding: .337rem .875rem; */
+}
+
+.side-navg li a:not(.button), .cls-menu-height {
+	padding: .337rem .875rem;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.cls-menu-icon {
+	margin-left: 6rem;
+}
+
+.cls-end-menu {
+	padding-left: 0.825rem;
+    background-color: #e3eaf4;
+   /*  height: 2.5rem;
+    line-height: 2.4375rem; */
+}
+ 

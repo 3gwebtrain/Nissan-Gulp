@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es-ES">
+<html lang="es-ES" ng-app="newPCSApp">
 <head>
 	<!-- don't remove -->
 	<base href="/">
@@ -17,36 +17,15 @@
 	<link rel="stylesheet" href="lib/pqGrid/pqgrid.dev.css">
 	<!-- endinject -->
 	<!-- inject:css -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<link rel="stylesheet" href="stylesheets/app.menu.css">
 	<link rel="stylesheet" href="stylesheets/main.css">
-	<link rel="stylesheet" href="stylesheets/angular-block-ui/angular-block-ui.css">
-	<link rel="stylesheet" href="stylesheets/angular-ui-grid/ui-grid.min.css">
-	<link rel="stylesheet" href="stylesheets/handson/handsontable.full.min.css">
-	<link rel="stylesheet" href="stylesheets/jquery-ui/jquery-ui.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqgrid.bootstrap.min.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqgrid.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqselect.dev.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqselect.min.css">
-	<link rel="stylesheet" href="stylesheets/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" href="stylesheets/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="stylesheets/foundation/css/foundation-datepicker.min.css">
-	<link rel="stylesheet" href="stylesheets/foundation/css/foundation.css">
-	<link rel="stylesheet" href="stylesheets/foundation/css/normalize.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.bootstrap.dev.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.bootstrap.min.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.dev.css">
-	<link rel="stylesheet" href="stylesheets/pqgrid/pqSelect/pqselect.min.css">
 	<!-- endinject -->
 	<!-- endbuild -->
 </head>
-<body ng-app="blog">
-	<div class="container-fluid">
-	<div class="row">
-	<aside class="col-sm-3">
-	<a ng-href="/new">Write Post</a>
-			</aside>
-			<section class="col-sm-9" ng-view></section>
-		</div>
-	</div>
+<body>
+	<div ng-view=""></div>
+	<ns-topbar></ns-topbar>
 	<!-- build:js js/vendor.min.js -->
 	<!-- bower:js -->
 	<script src="lib/angular/angular.js"></script>
@@ -83,10 +62,39 @@
 	<!-- endbuild -->
 	<!-- build:js js/app.min.js -->
 	<!-- inject:js -->
+	<script src="modules/ui/ui.module.js"></script>
+	<script src="modules/ui/plantCodeDropDown/directive/plantCodeDirective.js"></script>
+	<script src="modules/ui/menu/directive/menuDirective.js"></script>
+	<script src="modules/ui/util/pcs-util.directive.js"></script>
+	<script src="modules/ui/util/key-restriction.directive.js"></script>
+	<script src="modules/ui/topbar/topbar.directive.js"></script>
+	<script src="modules/ui/toggle-view/toggle-view.directive.js"></script>
+	<script src="modules/ui/multi-language/multi-language.directive.js"></script>
+	<script src="modules/ui/modal-criteria/criteria-modal.controller.js"></script>
+	<script src="modules/ui/menu-list/menu-list.directive.js"></script>
+	<script src="modules/ui/max-height/max-height.directive.js"></script>
+	<script src="modules/ui/line-chart/line-chart.directive.js"></script>
+	<script src="modules/ui/in-out/in-out.directive.js"></script>
+	<script src="modules/ui/global-nav/global-nav.directive.js"></script>
+	<script src="modules/ui/config-search/config-srch-criteria.directive.js"></script>
+	<script src="modules/ui/collapse/collapse.directive.js"></script>
+	<script src="modules/ui/bar-chart/bar-chart.directive.js"></script>
+	<script src="modules/ui/affix/affix.directive.js"></script>
+	<script src="modules/services/services.module.js"></script>
+	<script src="modules/services/user.service.js"></script>
+	<script src="modules/services/url.service.js"></script>
+	<script src="modules/services/stats.service.js"></script>
+	<script src="modules/services/shortcut.service.js"></script>
+	<script src="modules/services/sharing.service.js"></script>
+	<script src="modules/services/pcspage.service.js"></script>
+	<script src="modules/services/keyrestrict.service.js"></script>
+	<script src="modules/services/global-nav.service.js"></script>
+	<script src="modules/services/crud.service.js"></script>
+	<script src="modules/services/activities.service.js"></script>
+	<script src="modules/auth/auth.module.js"></script>
+	<script src="modules/auth/router.decorator.js"></script>
+	<script src="modules/auth/auth.service.js"></script>
 	<script src="modules/app.js"></script>
-	<script src="modules/blog.services.js"></script>
-	<script src="modules/templates.js"></script>
-	<script src="modules/users/users.controller.js"></script>
 	<!-- endinject -->
 	<!-- endbuild -->
 </body>

@@ -1,2 +1,0 @@
-angular.module('blog.templates', []).run(['$templateCache', function($templateCache) {$templateCache.put('modules/users/views/users-list.tpl.html','<h1>I am called from Users!! my Name is {{userlist.name}} </h1>');
-$templateCache.put('modules/posts/views/post-list.tpl.html','<h1>I am called from Post!! my Name is </h1>');}]);
